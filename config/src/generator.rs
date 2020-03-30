@@ -31,7 +31,7 @@ pub fn validator_swarm(
     for _index in 0..count {
         let mut node = NodeConfig::random_with_template(template, &mut rng);
         if randomize_ports {
-            node.randomize_ports();
+            // node.randomize_ports();
         }
 
         let mut storage_config = OnDiskStorageConfig::default();
