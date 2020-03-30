@@ -22,9 +22,9 @@ def create_client():
         
 
         print("Connecting to ac on: {}".format(ac_host))
-        cmd = "libra/target/debug/cli --url {} -m {}".format(
+        cmd = "target/debug/cli --url {} -m {}".format(
             ac_host,
-            "config/mint.key")
+            "../config/mint.key")
 
         application.client = pexpect.spawn(cmd)
         application.client.delaybeforesend = 0.1
